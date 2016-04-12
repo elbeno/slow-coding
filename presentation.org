@@ -1,0 +1,191 @@
+#    -*- mode: org -*-
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:nil
+#+OPTIONS: reveal_rolling_links:nil reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:900
+#+OPTIONS: toc:nil reveal_slide_number:"c/t"
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: none
+#+REVEAL_THEME: night
+#+REVEAL_HLEVEL: 1
+#+REVEAL_EXTRA_CSS: ./presentation.css
+#+REVEAL_ROOT: ../reveal.js/
+
+# (setq org-reveal-title-slide-template "<h1>%t</h1><h3>A Lightning Talk About Being Slow</h3><br/><br/><h2>%a</h2><h3>%e / <a href=\"http://twitter.com/ben_deane\">@ben_deane</a></h3><h2>%d</h2>")
+
+#+TITLE: Ruminative Coding
+#+AUTHOR: Ben Deane
+#+EMAIL: bdeane@blizzard.com
+#+DATE: Sometime 2016
+
+* Coding Quickly is a Virtue?
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag (appear)
+ - We always have deadlines
+ - Competitive programming
+ - Tech interview culture
+ - Social pressure
+
+#+BEGIN_NOTES
+It seems that we live in a world where fast coding is prized.
+#+END_NOTES
+
+* This happens sometimes...
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag (appear)
+1. Get a hard problem to solve
+1. Devise a solution
+1. Spend N days coding, debugging, testing
+1. It works!
+1. ...
+1. On day N+1, realise what you've written can be made much simpler
+
+#+REVEAL_HTML: <br/><br/><h2>
+#+ATTR_REVEAL: :frag appear
+...if you're lucky
+#+REVEAL_HTML: </h2>
+
+#+BEGIN_NOTES
+This happens to me a lot. Perhaps it's familiar to you, too.
+#+END_NOTES
+
+* How To Solve It (Polya)
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag (appear)
+1. Understand the problem
+1. Devise a plan
+1. Carry out the plan
+1. Look back
+
+#+REVEAL_HTML: <br/><br/>
+#+ATTR_REVEAL: :frag appear
+Step 4 is important!
+
+#+BEGIN_NOTES
+The book: heuristics and practice for solving problems.
+
+Beat between 3 and 4.
+#+END_NOTES
+
+* Look Back
+#+REVEAL_HTML: <br/>
+Build this step into your coding. Take time to ruminate on what you've done.
+
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+Take the time to spot optimizations.
+#+ATTR_REVEAL: :frag (appear)
+ - common subexpressions
+ - dependent conditions
+ - strength reductions
+
+#+REVEAL_HTML: <br/><br/>
+#+ATTR_REVEAL: :frag appear
+It is often the case, in coding as in mathematics, that a general problem can be
+solved more easily and more efficiently than a specific case.
+
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+Step back and recognize what you've really done. Take advantage of dead
+geniuses.
+
+#+BEGIN_NOTES
+This is a really important part of coding. Sometimes it happens when you didn't
+plan it (if you're lucky).
+
+Related problems - related solutions - relaxed constraints - more specific -
+more general - using all the data - recognizing progress.
+#+END_NOTES
+
+* Hammock Driven Development
+#+REVEAL_HTML: <br/>
+It's not about letting the answer just come to you. Step 4 is important but it
+can't be the only thing.
+
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+What actually happens:
+#+ATTR_REVEAL: :frag (appear)
+1. Understand the problem
+1. Devise a plan
+1. Carry out the plan
+1. Go to 1 with new insights
+
+#+BEGIN_NOTES
+It's usually not enough to just try to solve a problem without the
+implementation experience.
+
+Implementation experience is definitely part of understanding the problem.
+
+Especially if you are working in a large codebase on a problem that has to take
+into account existing code and constraints.
+#+END_NOTES
+
+* "Plan to throw one away...
+...you will, anyhow."
+#+REVEAL_HTML: <div align="right">
+-- Fred Brooks, [[http://http://www.amazon.com/The-Mythical-Man-Month-Engineering-Anniversary/dp/0201835959][/The Mythical Man Month/]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+At least recognize that if you implemented something, that was just
+the first thing you tried to implement.
+
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+You likely found a local maximum.
+
+#+BEGIN_NOTES
+You need to think about more than one solution in order to truly make a
+tradeoff.
+
+Otherwise a "tradeoff" is just "this part of the code isn't very good".
+#+END_NOTES
+
+* Why Do This?
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+Your conscious mind is good at analysis, critical thinking, tactics, finding
+maxima.
+
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+Your subconscious mind is good at synthesis, making connections, strategy, seeing
+abstractions.
+
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+Engage both parts in solving problems. Work hard on a problem. Then sleep on it.
+
+#+BEGIN_NOTES
+You don't solve problems in your sleep. It doesn't just happen that way.
+
+You work at solving problems consciously in order to build the agenda for your
+subconscious mind to work on.
+
+If the problem is hard, sometimes it takes a long time to come to a solution.
+You can work on multiple things at once, as long as you keep the problem ticking
+over.
+#+END_NOTES
+
+* Thanks For Listening
+#+REVEAL_HTML: <br/>
+1. Understand the problem
+1. Devise a plan
+1. Carry out the plan
+1. Reflect (maybe sleep) on the solution
+1. Realize something, go to 1.
+
+#+REVEAL_HTML: <br/>
+Reflect consciously. Take time for unconscious synthesis.
+
+#+REVEAL_HTML: <br/>
+[[https://www.youtube.com/watch?v=f84n5oFoZBc][Hammock Driven Development]] -- Rich Hickey
+
+[[http://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X][How To Solve It]] -- G. Polya
+
+#+BEGIN_NOTES
+There is always something new to be discovered about a problem.
+#+END_NOTES
