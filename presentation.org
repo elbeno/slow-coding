@@ -39,7 +39,7 @@ It seems that we live in a world where fast coding is prized.
 1. Spend N days coding, debugging, testing
 1. It works!
 1. ...
-1. On day N+1, realise what you've written can be made much simpler
+1. On day N+k, realise what you've written can be made much simpler
 
 #+REVEAL_HTML: <br/><br/><h2>
 #+ATTR_REVEAL: :frag appear
@@ -48,6 +48,9 @@ It seems that we live in a world where fast coding is prized.
 
 #+BEGIN_NOTES
 This happens to me a lot. Perhaps it's familiar to you, too.
+
+Step 6 often doesn't happen until I revisit the code months later. When I can
+see the wood and not just the trees.
 #+END_NOTES
 
 * How To Solve It (Polya)
@@ -68,7 +71,7 @@ The book: heuristics and practice for solving problems.
 Beat between 3 and 4.
 #+END_NOTES
 
-* Look Back
+* Reflect on the Structure
 #+REVEAL_HTML: <br/>
 Build this step into your coding. Take time to ruminate on what you've done.
 
@@ -81,6 +84,25 @@ Take the time to spot optimizations.
  - strength reductions
 
 #+REVEAL_HTML: <br/><br/>
+#+ATTR_REVEAL: :frag appear
+Take the time to analyse the interface.
+#+ATTR_REVEAL: :frag (appear)
+ - consistency of argument types/positions
+ - minimal, complete
+ - well-performing
+ - identify the invariants
+
+#+BEGIN_NOTES
+This is a really important part of coding. Sometimes it happens when you didn't
+plan it (if you're lucky).
+#+END_NOTES
+
+* Reflect on the Problem
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+What are the data dependencies? What are the algorithms?
+
+#+REVEAL_HTML: <br/>
 #+ATTR_REVEAL: :frag appear
 It is often the case, in coding as in mathematics, that a general problem can be
 solved more easily and more efficiently than a specific case.
