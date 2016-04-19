@@ -63,7 +63,8 @@ see the wood and not just the trees.
 
 #+REVEAL_HTML: <br/><br/>
 #+ATTR_REVEAL: :frag appear
-Step 4 is important!
+Step 4 is important! Build this step into your coding. Take time to ruminate on
+what you've done.
 
 #+BEGIN_NOTES
 The book: heuristics and practice for solving problems.
@@ -73,9 +74,6 @@ Beat between 3 and 4.
 
 * Reflect on the Structure
 #+REVEAL_HTML: <br/>
-Build this step into your coding. Take time to ruminate on what you've done.
-
-#+REVEAL_HTML: <br/>
 #+ATTR_REVEAL: :frag appear
 Take the time to spot optimizations.
 #+ATTR_REVEAL: :frag (appear)
@@ -83,7 +81,14 @@ Take the time to spot optimizations.
  - dependent conditions
  - strength reductions
 
-#+REVEAL_HTML: <br/><br/>
+#+BEGIN_NOTES
+Don't rely on the compiler to optimize things like this.
+
+Make the code simpler and it's often faster. Do less.
+#+END_NOTES
+
+* Reflect on the Interface
+#+REVEAL_HTML: <br/>
 #+ATTR_REVEAL: :frag appear
 Take the time to analyse the interface.
 #+ATTR_REVEAL: :frag (appear)
@@ -91,10 +96,37 @@ Take the time to analyse the interface.
  - minimal, complete
  - well-performing
  - identify the invariants
+#+REVEAL_HTML: <br/><br/>
 
 #+BEGIN_NOTES
-This is a really important part of coding. Sometimes it happens when you didn't
-plan it (if you're lucky).
+Are the mechanical things correct? Is it easy to use?
+
+Can a user do everything they want to?
+
+Is it easy to write code that performs well?
+
+Member functions vs free functions or static functions. Public/private? Runtime
+polymorphism vs parametric polymorphism? Object lifetimes & ownership?
+#+END_NOTES
+
+* Reflect on the Functionality
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+Take the time to analyse the functionality.
+#+ATTR_REVEAL: :frag (appear)
+ - law of useful return
+ - law of completeness
+ - law of separating types
+ - law of interface refinement
+
+#+BEGIN_NOTES
+Return useful things that are computed.
+
+Don't assume that types need to be the same. Try varying them and exploring the
+design space.
+
+Programming is a multi-pass activity. Refining an interface requires you to have
+used it - may take a while.
 #+END_NOTES
 
 * Reflect on the Problem
@@ -113,9 +145,6 @@ Step back and recognize what you've really done. Take advantage of dead
 geniuses.
 
 #+BEGIN_NOTES
-This is a really important part of coding. Sometimes it happens when you didn't
-plan it (if you're lucky).
-
 Related problems - related solutions - relaxed constraints - more specific -
 more general - using all the data - recognizing progress.
 #+END_NOTES
