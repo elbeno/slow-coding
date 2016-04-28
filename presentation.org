@@ -1,5 +1,5 @@
 #    -*- mode: org -*-
-#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:nil
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:nil
 #+OPTIONS: reveal_rolling_links:nil reveal_keyboard:t reveal_overview:t num:nil
 #+OPTIONS: reveal_width:1200 reveal_height:900
 #+OPTIONS: toc:nil reveal_slide_number:"c/t"
@@ -9,7 +9,6 @@
 #+REVEAL_TRANS: none
 #+REVEAL_THEME: night
 #+REVEAL_HLEVEL: 1
-#+REVEAL_EXTRA_CSS: ./presentation.css
 #+REVEAL_ROOT: ../reveal.js/
 
 # (setq org-reveal-title-slide-template "<h1>%t</h1><h3>A Lightning Talk About Being Slow</h3><br/><br/><h2>%a</h2><h3>%e / <a href=\"http://twitter.com/ben_deane\">@ben_deane</a></h3><h2>%d</h2>")
@@ -67,9 +66,17 @@ Step 4 is important! Build this step into your coding. Take time to ruminate on
 what you've done.
 
 #+BEGIN_NOTES
+How do we solve coding problems?
+
 The book: heuristics and practice for solving problems.
 
 Beat between 3 and 4.
+#+END_NOTES
+
+* Techniques...
+
+#+BEGIN_NOTES
+Let's take a look at some deliberate techniques for reflecting on code.
 #+END_NOTES
 
 * Reflect on the Structure
@@ -149,6 +156,12 @@ Related problems - related solutions - relaxed constraints - more specific -
 more general - using all the data - recognizing progress.
 #+END_NOTES
 
+* Process
+
+#+BEGIN_NOTES
+A look at the broader process.
+#+END_NOTES
+
 * Hammock Driven Development
 #+REVEAL_HTML: <br/>
 It's not about letting the answer just come to you. Step 4 is important but it
@@ -223,14 +236,9 @@ over.
 
 * Thanks For Listening
 #+REVEAL_HTML: <br/>
-1. Understand the problem
-1. Devise a plan
-1. Carry out the plan
-1. Reflect (maybe sleep) on the solution
-1. Realize something, go to 1.
-
+Take time to look back.
 #+REVEAL_HTML: <br/>
-Reflect consciously. Take time for unconscious synthesis.
+Reflect consciously. Take time for subconscious synthesis.
 
 #+REVEAL_HTML: <br/>
 [[https://www.youtube.com/watch?v=f84n5oFoZBc][Hammock Driven Development]] -- Rich Hickey
