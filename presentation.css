@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Inconsolata";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Inconsolata"), url("http://themes.googleusercontent.com/static/fonts/inconsolata/v3/BjAYBlHtW3CJxDcjzrnZCIbN6UDyHWBl620a-IRfuBk.woff") format("woff");
+}
+
+.reveal code {
+    font-family: Inconsolata;
+}
+
+.reveal pre {
+    font-family: Inconsolata;
+    font-size: 30px;
+}
+
+#columns ul {
+  width:700px;
+  overflow:hidden;
+  text-align:center;
+}
+#columns li {
+  float:left;
+  display:inline;
+}
+
+#double li  { width:50%; }

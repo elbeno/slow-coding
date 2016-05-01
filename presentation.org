@@ -1,14 +1,15 @@
 #    -*- mode: org -*-
-#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:nil
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:nil
 #+OPTIONS: reveal_rolling_links:nil reveal_keyboard:t reveal_overview:t num:nil
 #+OPTIONS: reveal_width:1200 reveal_height:900
-#+OPTIONS: toc:nil reveal_slide_number:"c/t"
+#+OPTIONS: -:nil toc:nil reveal_slide_number:"c/t"
 #+REVEAL_MARGIN: 0.1
 #+REVEAL_MIN_SCALE: 0.5
 #+REVEAL_MAX_SCALE: 2.5
 #+REVEAL_TRANS: none
 #+REVEAL_THEME: night
 #+REVEAL_HLEVEL: 1
+#+REVEAL_EXTRA_CSS: ./presentation.css
 #+REVEAL_ROOT: ../reveal.js/
 
 # (setq org-reveal-title-slide-template "<h1>%t</h1><h3>A Lightning Talk About Being Slow</h3><br/><br/><h2>%a</h2><h3>%e / <a href=\"http://twitter.com/ben_deane\">@ben_deane</a></h3><h2>%d</h2>")
@@ -43,13 +44,16 @@ It seems that we live in a world where fast coding is prized.
 #+REVEAL_HTML: <br/><br/><h2>
 #+ATTR_REVEAL: :frag appear
 ...if you're lucky
-#+REVEAL_HTML: </h2>
+# +REVEAL_HTML: </h2>
 
 #+BEGIN_NOTES
-This happens to me a lot. Perhaps it's familiar to you, too.
+This has probably happened to everyone here.
 
 Step 6 often doesn't happen until I revisit the code months later. When I can
 see the wood and not just the trees.
+
+How can we make try to make step 6 happen more often and when we're writing the
+code rather than months afterwards?
 #+END_NOTES
 
 * How To Solve It (Polya)
@@ -73,10 +77,32 @@ The book: heuristics and practice for solving problems.
 Beat between 3 and 4.
 #+END_NOTES
 
-* Techniques...
+* Techniques
 
 #+BEGIN_NOTES
 Let's take a look at some deliberate techniques for reflecting on code.
+#+END_NOTES
+
+* "Plan to throw one away...
+...you will, anyhow."
+#+REVEAL_HTML: <div align="right">
+-- Fred Brooks, [[http://http://www.amazon.com/The-Mythical-Man-Month-Engineering-Anniversary/dp/0201835959][/The Mythical Man Month/]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+At least recognize that if you implemented something, that was just
+the first thing you tried to implement.
+
+#+REVEAL_HTML: <br/>
+#+ATTR_REVEAL: :frag appear
+You likely found a local maximum.
+
+#+BEGIN_NOTES
+You need to think about more than one solution in order to truly make a
+tradeoff.
+
+Otherwise a "tradeoff" is just "this part of the code isn't very good".
 #+END_NOTES
 
 * Reflect on the Structure
@@ -152,6 +178,8 @@ Step back and recognize what you've really done. Take advantage of dead
 geniuses.
 
 #+BEGIN_NOTES
+How To Solve It comes in handy here.
+
 Related problems - related solutions - relaxed constraints - more specific -
 more general - using all the data - recognizing progress.
 #+END_NOTES
@@ -159,13 +187,13 @@ more general - using all the data - recognizing progress.
 * Process
 
 #+BEGIN_NOTES
-A look at the broader process.
+Let's take a look at the broader process of problem solving implementing
+solutions. Why do answers so often come to us in the shower?
 #+END_NOTES
 
 * Hammock Driven Development
 #+REVEAL_HTML: <br/>
-It's not about letting the answer just come to you. Step 4 is important but it
-can't be the only thing.
+It's not about letting the answer just come to you.
 
 #+REVEAL_HTML: <br/>
 #+ATTR_REVEAL: :frag appear
@@ -186,38 +214,24 @@ Especially if you are working in a large codebase on a problem that has to take
 into account existing code and constraints.
 #+END_NOTES
 
-* "Plan to throw one away...
-...you will, anyhow."
-#+REVEAL_HTML: <div align="right">
--- Fred Brooks, [[http://http://www.amazon.com/The-Mythical-Man-Month-Engineering-Anniversary/dp/0201835959][/The Mythical Man Month/]]
-#+REVEAL_HTML: </div>
-
-#+REVEAL_HTML: <br/>
-#+ATTR_REVEAL: :frag appear
-At least recognize that if you implemented something, that was just
-the first thing you tried to implement.
-
-#+REVEAL_HTML: <br/>
-#+ATTR_REVEAL: :frag appear
-You likely found a local maximum.
-
-#+BEGIN_NOTES
-You need to think about more than one solution in order to truly make a
-tradeoff.
-
-Otherwise a "tradeoff" is just "this part of the code isn't very good".
-#+END_NOTES
-
 * Why Do This?
-#+REVEAL_HTML: <br/>
-#+ATTR_REVEAL: :frag appear
-Your conscious mind is good at analysis, critical thinking, tactics, finding
-maxima.
+#+REVEAL_HTML: <br/><h3>
+#+REVEAL_HTML: <div id="columns"> <div id="double">
+ - Conscious
+ - Subconscious
+#+REVEAL_HTML: </div></div></h3>
 
-#+REVEAL_HTML: <br/>
-#+ATTR_REVEAL: :frag appear
-Your subconscious mind is good at synthesis, making connections, strategy, seeing
-abstractions.
+#+REVEAL_HTML: <div id="columns"> <div id="double">
+#+ATTR_REVEAL: :frag (appear appear appear appear appear appear appear appear) :frag_idx (1 1 2 2 3 3 4 4)
+ - analysis
+ - synthesis
+ - critical thinking
+ - making connections
+ - tactics
+ - strategy
+ - optimizing
+ - seeing abstractions
+#+REVEAL_HTML: </div></div>
 
 #+REVEAL_HTML: <br/>
 #+ATTR_REVEAL: :frag appear
