@@ -3,10 +3,10 @@
 #+OPTIONS: reveal_rolling_links:nil reveal_keyboard:t reveal_overview:t num:nil
 #+OPTIONS: reveal_width:1200 reveal_height:900
 #+OPTIONS: -:nil toc:nil reveal_slide_number:"c/t"
-#+REVEAL_MARGIN: 0.1
-#+REVEAL_MIN_SCALE: 0.5
-#+REVEAL_MAX_SCALE: 2.5
-#+REVEAL_TRANS: none
+# +REVEAL_MARGIN: 0.1
+# +REVEAL_MIN_SCALE: 0.5
+# +REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: linear
 #+REVEAL_THEME: night
 #+REVEAL_HLEVEL: 1
 #+REVEAL_EXTRA_CSS: ./presentation.css
@@ -191,7 +191,7 @@ Let's take a look at the broader process of problem solving implementing
 solutions. Why do answers so often come to us in the shower?
 #+END_NOTES
 
-* Hammock Driven Development
+* Think on it? Sleep on it?
 #+REVEAL_HTML: <br/>
 It's not about letting the answer just come to you.
 
