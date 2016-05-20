@@ -12,9 +12,9 @@
 #+REVEAL_EXTRA_CSS: ./presentation.css
 #+REVEAL_ROOT: ../reveal.js/
 
-# (setq org-reveal-title-slide-template "<h1>%t</h1><h3>A Lightning Talk About Being Slow</h3><br/><br/><h2>%a</h2><h3>%e / <a href=\"http://twitter.com/ben_deane\">@ben_deane</a></h3><h2>%d</h2>")
+# (setq org-reveal-title-slide-template "<h1>%t</h1><h3>A Lightning Talk About Rumination</h3><br/><br/><h2>%a</h2><h3>%e / <a href=\"http://twitter.com/ben_deane\">@ben_deane</a></h3><h2>%d</h2>")
 
-#+TITLE: Ruminative Coding
+#+TITLE: Slow Coding
 #+AUTHOR: Ben Deane
 #+EMAIL: bdeane@blizzard.com
 #+DATE: Sometime 2016
@@ -99,8 +99,8 @@ the first thing you tried to implement.
 You likely found a local maximum.
 
 #+BEGIN_NOTES
-You need to think about more than one solution in order to truly make a
-tradeoff.
+You need to think about more than one solution, in some depth, in order to truly
+make a tradeoff.
 
 Otherwise a "tradeoff" is just "this part of the code isn't very good".
 #+END_NOTES
@@ -108,16 +108,21 @@ Otherwise a "tradeoff" is just "this part of the code isn't very good".
 * Reflect on the Structure
 #+REVEAL_HTML: <br/>
 #+ATTR_REVEAL: :frag appear
-Take the time to spot optimizations.
+Take the time to spot optimizations/simplifications.
 #+ATTR_REVEAL: :frag (appear)
  - common subexpressions
  - dependent conditions
  - strength reductions
+ - hoisting
+ - loop choices (for/while/do-while)
 
 #+BEGIN_NOTES
 Don't rely on the compiler to optimize things like this.
 
 Make the code simpler and it's often faster. Do less.
+
+These transformations can end up transforming algorithms. The compiler can't see
+things like that.
 #+END_NOTES
 
 * Reflect on the Interface
@@ -158,8 +163,11 @@ Return useful things that are computed.
 Don't assume that types need to be the same. Try varying them and exploring the
 design space.
 
+Can you genericise? With what parameters? What are the true constraints on
+types? Try varying them and see how that affects performance or use.
+
 Programming is a multi-pass activity. Refining an interface requires you to have
-used it - may take a while.
+used it - may take a while. (Possibly years.)
 #+END_NOTES
 
 * Reflect on the Problem
@@ -182,6 +190,9 @@ How To Solve It comes in handy here.
 
 Related problems - related solutions - relaxed constraints - more specific -
 more general - using all the data - recognizing progress.
+
+Having a good toolbox of algorithms helps here. Or at least, knowing some terms
+to google.
 #+END_NOTES
 
 * Process
@@ -238,7 +249,11 @@ into account existing code and constraints.
 Engage both parts in solving problems. Work hard on a problem. Then sleep on it.
 
 #+BEGIN_NOTES
-You don't solve problems in your sleep. It doesn't just happen that way.
+We've all had the experience of solutions coming to us on waking/in the
+shower/on our commute/etc.
+
+But you don't just solve problems in your sleep. It doesn't just happen that
+way.
 
 You work at solving problems consciously in order to build the agenda for your
 subconscious mind to work on.
