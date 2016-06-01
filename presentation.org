@@ -17,7 +17,7 @@
 #+TITLE: Slow Coding
 #+AUTHOR: Ben Deane
 #+EMAIL: bdeane@blizzard.com
-#+DATE: Sometime 2016
+#+DATE: June 1st, 2016
 
 * Coding Quickly is a Virtue?
 #+REVEAL_HTML: <br/>
@@ -29,6 +29,11 @@
 
 #+BEGIN_NOTES
 It seems that we live in a world where fast coding is prized.
+
+Programming is an activity of invention, where we forge code that bends the
+machine to our will.
+
+What about coding as a discovery activity?
 #+END_NOTES
 
 * This happens sometimes...
@@ -77,12 +82,6 @@ The book: heuristics and practice for solving problems.
 Beat between 3 and 4.
 #+END_NOTES
 
-* Techniques
-
-#+BEGIN_NOTES
-Let's take a look at some deliberate techniques for reflecting on code.
-#+END_NOTES
-
 * "Plan to throw one away...
 ...you will, anyhow."
 #+REVEAL_HTML: <div align="right">
@@ -103,6 +102,12 @@ You need to think about more than one solution, in some depth, in order to truly
 make a tradeoff.
 
 Otherwise a "tradeoff" is just "this part of the code isn't very good".
+#+END_NOTES
+
+* Techniques
+
+#+BEGIN_NOTES
+Let's take a look at some deliberate techniques for reflecting on code.
 #+END_NOTES
 
 * Reflect on the Structure
@@ -186,10 +191,12 @@ Step back and recognize what you've really done. Take advantage of dead
 geniuses.
 
 #+BEGIN_NOTES
-How To Solve It comes in handy here.
+Why do we study data structures, algorithms, patterns? Because many times we end
+up implementing them. Whether we recognize it or not.
 
-Related problems - related solutions - relaxed constraints - more specific -
-more general - using all the data - recognizing progress.
+How To Solve It heuristics: Related problems - related solutions - relaxed
+constraints - more specific - more general - using all the data - recognizing
+progress.
 
 Having a good toolbox of algorithms helps here. Or at least, knowing some terms
 to google.
