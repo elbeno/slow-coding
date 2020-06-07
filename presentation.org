@@ -1,26 +1,33 @@
 #    -*- mode: org -*-
-#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:nil
-#+OPTIONS: reveal_rolling_links:nil reveal_keyboard:t reveal_overview:t num:nil
-#+OPTIONS: reveal_width:1200 reveal_height:900
-#+OPTIONS: -:nil toc:nil reveal_slide_number:"c/t"
-# +REVEAL_MARGIN: 0.1
-# +REVEAL_MIN_SCALE: 0.5
-# +REVEAL_MAX_SCALE: 2.5
-#+REVEAL_TRANS: linear
-#+REVEAL_THEME: night
+#+OPTIONS: reveal_center:t reveal_progress:nil reveal_history:nil reveal_control:nil
+#+OPTIONS: reveal_mathjax:t reveal_rolling_links:nil reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1600 reveal_height:900
+#+OPTIONS: toc:nil <:nil timestamp:nil email:t reveal_slide_number:"c/t"
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: none
+#+REVEAL_THEME: blood
 #+REVEAL_HLEVEL: 1
 #+REVEAL_EXTRA_CSS: ./presentation.css
 #+REVEAL_ROOT: ../reveal.js/
 
-# (setq org-reveal-title-slide-template "<h1>%t</h1><h3>A Lightning Talk About Rumination</h3><br/><br/><h2>%a</h2><h3>%e / <a href=\"http://twitter.com/ben_deane\">@ben_deane</a></h3><h2>%d</h2>")
-
 #+TITLE: Slow Coding
 #+AUTHOR: Ben Deane
-#+EMAIL: bdeane@blizzard.com
-#+DATE: June 1st, 2016
+#+DATE: June 9th, 2020
+
+#+REVEAL_HTML: <script type="text/javascript" src="./presentation.js"></script>
+
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2><br/><h3>or, The Blacksmith and the Gardener</h3><br/><br/><h3>%a / <a href=\"http://twitter.com/ben_deane\">@ben_deane</a></h3><h4>%d</h4>
+
+* Settings                                                         :noexport:
+#+begin_source elisp
+(set-face-foreground 'font-lock-comment-face "magenta")
+(set-face-foreground 'font-lock-comment-delimiter-face "magenta")
+#+end_source
 
 * Coding Quickly is a Virtue?
-#+REVEAL_HTML: <br/>
+#+REVEAL_HTML: <div class='vertspace1'></div>
 #+ATTR_REVEAL: :frag (appear)
  - We always have deadlines
  - Competitive programming
@@ -36,8 +43,25 @@ machine to our will.
 What about coding as a discovery activity?
 #+END_NOTES
 
+* A cliché
+#+REVEAL_HTML: <div class='vertspace1'></div>
+
+"I realised the solution while I was in the shower."
+
+Or: while exercising, just before going to sleep, etc, etc.
+
+Why does this happen?
+
+#+begin_notes
+This has happened to us all.
+
+Why does this happen?
+
+Can we make it happen more often? I'm going to offer some ideas.
+#+end_notes
+
 * This happens sometimes...
-#+REVEAL_HTML: <br/>
+#+REVEAL_HTML: <div class='vertspace1'></div>
 #+ATTR_REVEAL: :frag (appear)
 1. Get a hard problem to solve
 1. Devise a solution
@@ -52,17 +76,38 @@ What about coding as a discovery activity?
 # +REVEAL_HTML: </h2>
 
 #+BEGIN_NOTES
-This has probably happened to everyone here.
+This also has probably happened to us all.
 
 Step 6 often doesn't happen until I revisit the code months later. When I can
 see the wood and not just the trees.
 
-How can we make try to make step 6 happen more often and when we're writing the
+Again, how can we make try to make step 6 happen more often and when we're writing the
 code rather than months afterwards?
 #+END_NOTES
 
+* Inspiration out of the blue?
+#+REVEAL_HTML: <div class='vertspace1'></div>
+It. Never. Happens.
+
+#+REVEAL_HTML: <blockquote nil><p>&quot;Dans les champs de l'observation le hasard ne favorise que les esprits préparés.&quot;</p>
+#+REVEAL_HTML: <div></div><div class='author'>-- Louis Pasteur</div></blockquote>
+
+#+begin_notes
+It's important to realize: it's no good just sitting around waiting for
+lightning to strike. This quote is usually rendered in English as "Fortune favours the
+prepared mind".
+
+The popular myth of the genius lone inventor or the sudden flash of inspiration
+out of nowhere is just that: a myth.
+
+Too often, we don't hear about the years of work and preparation that go into
+making a discovery: we just hear about the end product.
+
+It's worth remembering why WD-40 is so named. We have to put in the legwork.
+#+end_notes
+
 * How To Solve It (Polya)
-#+REVEAL_HTML: <br/>
+#+REVEAL_HTML: <div class='vertspace1'></div>
 #+ATTR_REVEAL: :frag (appear)
 1. Understand the problem
 1. Devise a plan
@@ -71,8 +116,8 @@ code rather than months afterwards?
 
 #+REVEAL_HTML: <br/><br/>
 #+ATTR_REVEAL: :frag appear
-Step 4 is important! Build this step into your coding. Take time to ruminate on
-what you've done.
+Step 4 is important! Build this step into your coding. \\
+Take time to ruminate on what you've done.
 
 #+BEGIN_NOTES
 How do we solve coding problems?
@@ -83,6 +128,7 @@ Beat between 3 and 4.
 #+END_NOTES
 
 * "Plan to throw one away...
+#+REVEAL_HTML: <div class='vertspace1'></div>
 ...you will, anyhow."
 #+REVEAL_HTML: <div align="right">
 -- Fred Brooks, [[http://http://www.amazon.com/The-Mythical-Man-Month-Engineering-Anniversary/dp/0201835959][/The Mythical Man Month/]]
@@ -90,8 +136,8 @@ Beat between 3 and 4.
 
 #+REVEAL_HTML: <br/>
 #+ATTR_REVEAL: :frag appear
-At least recognize that if you implemented something, that was just
-the first thing you tried to implement.
+At least recognize that if you implemented something, \\
+that was just the first thing you tried to implement.
 
 #+REVEAL_HTML: <br/>
 #+ATTR_REVEAL: :frag appear
@@ -111,7 +157,7 @@ Let's take a look at some deliberate techniques for reflecting on code.
 #+END_NOTES
 
 * Reflect on the Structure
-#+REVEAL_HTML: <br/>
+#+REVEAL_HTML: <div class='vertspace1'></div>
 #+ATTR_REVEAL: :frag appear
 Take the time to spot optimizations/simplifications.
 #+ATTR_REVEAL: :frag (appear)
@@ -131,10 +177,11 @@ things like that.
 #+END_NOTES
 
 * Reflect on the Interface
-#+REVEAL_HTML: <br/>
+#+REVEAL_HTML: <div class='vertspace1'></div>
 #+ATTR_REVEAL: :frag appear
 Take the time to analyse the interface.
 #+ATTR_REVEAL: :frag (appear)
+ - interface boundaries
  - consistency of argument types/positions
  - minimal, complete
  - well-performing
@@ -153,7 +200,7 @@ polymorphism vs parametric polymorphism? Object lifetimes & ownership?
 #+END_NOTES
 
 * Reflect on the Functionality
-#+REVEAL_HTML: <br/>
+#+REVEAL_HTML: <div class='vertspace1'></div>
 #+ATTR_REVEAL: :frag appear
 Take the time to analyse the functionality.
 #+ATTR_REVEAL: :frag (appear)
@@ -176,7 +223,7 @@ used it - may take a while. (Possibly years.)
 #+END_NOTES
 
 * Reflect on the Problem
-#+REVEAL_HTML: <br/>
+#+REVEAL_HTML: <div class='vertspace1'></div>
 #+ATTR_REVEAL: :frag appear
 What are the data dependencies? What are the algorithms?
 
@@ -202,6 +249,29 @@ Having a good toolbox of algorithms helps here. Or at least, knowing some terms
 to google.
 #+END_NOTES
 
+* Ask absurd questions
+#+REVEAL_HTML: <div class='vertspace1'></div>
+#+ATTR_REVEAL: :frag (appear)
+ - What if <X> was actually a <Y>?
+ - What if everything was an <X>?
+ - What if <object> could do <function>?
+ - What if we couldn't do <X>?
+
+#+begin_notes
+In exploring the possibilities for a system, I sometimes ask what seem to be
+silly questions. Sometimes the answers are not so silly.
+
+Sometimes I see that what seemed impossible actually might be possible.
+
+Sometimes what I was thinking about as one type of thing can be viewed as
+another type of thing.
+
+This gives me insight into related solutions, constraints, and possibilities. It
+helps me see the choices I've made that I didn't realize I was making.
+
+These questions are often very basic, low level questions about how the system works.
+#+end_notes
+
 * Process
 
 #+BEGIN_NOTES
@@ -210,7 +280,7 @@ solutions. Why do answers so often come to us in the shower?
 #+END_NOTES
 
 * Think on it? Sleep on it?
-#+REVEAL_HTML: <br/>
+#+REVEAL_HTML: <div class='vertspace1'></div>
 It's not about letting the answer just come to you.
 
 #+REVEAL_HTML: <br/>
@@ -233,14 +303,14 @@ into account existing code and constraints.
 #+END_NOTES
 
 * Why Do This?
-#+REVEAL_HTML: <br/><h3>
+#+REVEAL_HTML: <div class='vertspace1'></div><h3>
 #+REVEAL_HTML: <div id="columns"> <div id="double">
  - Conscious
  - Subconscious
 #+REVEAL_HTML: </div></div></h3>
 
 #+REVEAL_HTML: <div id="columns"> <div id="double">
-#+ATTR_REVEAL: :frag (appear appear appear appear appear appear appear appear) :frag_idx (1 1 2 2 3 3 4 4)
+#+ATTR_REVEAL: :frag (appear appear appear appear appear appear appear appear appear appear) :frag_idx (1 1 2 2 3 3 4 4 5 5)
  - analysis
  - synthesis
  - critical thinking
@@ -249,6 +319,8 @@ into account existing code and constraints.
  - strategy
  - optimizing
  - seeing abstractions
+ - academic
+ - experiential
 #+REVEAL_HTML: </div></div>
 
 #+REVEAL_HTML: <br/>
@@ -270,16 +342,32 @@ You can work on multiple things at once, as long as you keep the problem ticking
 over.
 #+END_NOTES
 
+* The blacksmith and the gardener
+#+REVEAL_HTML: <div class='vertspace1'></div>
+Programming is a creative endeavour.
+
+#+REVEAL_HTML: <blockquote nil><p>&quot;When I am working on a problem, I never think about beauty. But when I have finished, if the solution is not beautiful, I know it is wrong.&quot;</p>
+#+REVEAL_HTML: <div></div><div class='author'>-- R. Buckminster Fuller</div></blockquote>
+
+#+begin_notes
+Our conscious mind is the blacksmith. Sometimes we must forge a program.
+
+Our subconscious mind is the gardener. Sometimes we must nurture a program.
+
+Both forms of creation are useful and can work together.
+#+end_notes
+
 * Thanks For Listening
-#+REVEAL_HTML: <br/>
+#+REVEAL_HTML: <div class='vertspace1'></div>
+
+#+REVEAL_HTML: <blockquote nil><p>&quot;We shall not cease from exploration, and the end of all our exploring will be to arrive where we started and know the place for the first time.&quot;</p>
+#+REVEAL_HTML: <div></div><div class='author'>-- T. S. Eliot</div></blockquote><br/><br/>
+
 Take time to look back.
-#+REVEAL_HTML: <br/>
-Reflect consciously. Take time for subconscious synthesis.
 
-#+REVEAL_HTML: <br/>
-[[https://www.youtube.com/watch?v=f84n5oFoZBc][Hammock Driven Development]] -- Rich Hickey
+Reflect consciously.
 
-[[http://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069116407X][How To Solve It]] -- G. Polya
+Take time for subconscious synthesis.
 
 #+BEGIN_NOTES
 There is always something new to be discovered about a problem.
